@@ -3,8 +3,7 @@
 //   res.status(200).send(`Hello ${name}, you just parsed the request body!`)
 // }
 
-
-export async function handler(event, context) {
+exports.handler = async function(event, context) {
  
  const { name = 'World' } = req.query
 
@@ -16,4 +15,5 @@ export async function handler(event, context) {
         msg:`Hello ${name}, you just parsed the request body!`
       })
   }
+
 }
