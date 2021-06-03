@@ -4,8 +4,11 @@
 // }
 
 exports.handler = async function(event, context) {
+
+ console.log("> event   : ", event)
+ console.log("> context : ", context)
  
- const { name = 'World' } = req.query
+ const { name = 'World' } = event.query
 
  return {
     headers: { 'content-type': 'application/json;charset=utf-8' },
