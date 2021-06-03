@@ -1,14 +1,8 @@
-// module.exports = async (req, res) => {
-//   const { name = 'World' } = req.query
-//   res.status(200).send(`Hello ${name}, you just parsed the request body!`)
-// }
-
 exports.handler = async function(event, context) {
 
- console.log("> event   : ", event)
- console.log("> context : ", context)
+ let q = event.queryStringParameters
  
- const { name = 'World' } = event.query
+ const { name = 'World' } = q.query
 
  return {
     headers: { 'content-type': 'application/json;charset=utf-8' },
