@@ -1,7 +1,7 @@
 exports.handler = async function(event, context) {
 
  let q = event.queryStringParameters
- const name = q.query || 'World' 
+ const name = q.name || 'World' 
 
  return {
     headers: { 'content-type': 'application/json;charset=utf-8' },
